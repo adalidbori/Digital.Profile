@@ -1,0 +1,55 @@
+.metasDiv{
+    display: flex;
+    height: 70px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1), 0 3px 3px rgba(0,0,0,0.1);
+    background-color: beige;
+}
+.leftImage{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightImage{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.metaContent{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textMeta{
+    margin: 0;
+}
+
+.textMetaDesc{
+    font-size: smaller;
+}
+.textoEnAzul{
+    color: rgb(39, 121, 252);
+}
+.textoNegro{
+    color: black;
+}
+
+.arrowToRigth{
+    transform: translateX(5px);
+    transition: transform 0.5s ease-in-out;
+}
+
+.arrowBack{
+    transform: translateX(-5px);
+    transition: transform 0.5s ease-in-out;
+}
+.pointerDiv{
+    cursor: pointer;
+}
+
+.unPointerDIv{
+    cursor: none;
+}

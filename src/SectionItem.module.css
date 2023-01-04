@@ -1,0 +1,33 @@
+.generalGrid{
+    display: flex;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.generalGridBackground{
+    background-color: rgb(242, 242, 242);
+    cursor: none;
+}
+
+.generalGridBackgroundHover{
+    background-color: rgb(218, 232, 252);
+    cursor: pointer;
+}
+
+.textGridColorHover{
+    color:  rgb(0, 62, 149);
+}
+
+.textGridColor{
+    color: black;
+}
+
+
+.spanSectionItem{
+    width: 10%;
+}
+
+.titleSectionItem{
+    width: 90%;
+}
