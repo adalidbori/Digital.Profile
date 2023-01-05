@@ -9,40 +9,59 @@
     font-size: 20px;
 }
 
+.generalContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .usernameContainer {
     background-color: rgb(235, 235, 235);
-    border: 1px solid #000;
     width: 40%;
-    
+    border-radius: 8px;
+    padding-left: 10px;
+    margin-bottom: 10px;
 }
-
+.usernameContainer:hover{
+    border: 2px solid rgb(163, 159, 159);
+}
 .usernameLabel {
     margin-right: 2px;
+    color: rgb(126, 126, 126);
 }
 
 .inputUsername {
     border: none;
-    background-color: rgb(245, 189, 189);
     padding: 15px 15px 15px 0;
     width: calc(100% - 130px);
+    font-size: medium;
+    background-color: rgb(235, 235, 235);
 }
 
 .inputUsername:focus {
     outline: none;
 }
 
+.inputEmailConteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 1200px){
     .usernameContainer{
-        width: 60%;
+        width: 50%;
     }
 }
 
 @media (max-width: 790px){
     .usernameContainer{
-        width: 80%;
+        width: 70%;
     }
 }
 @media (max-width: 600px){
+    .usernameContainer{
+        width: 90%;
+    }
     .inputUsername{
         width: calc(100% - 130px);
     }
