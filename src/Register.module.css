@@ -19,7 +19,6 @@
     width: 40%;
     border-radius: 8px;
     padding-left: 10px;
-    margin-bottom: 10px;
 }
 .usernameContainer:hover{
     border: 2px solid rgb(163, 159, 159);
@@ -45,10 +44,15 @@
     padding: 15px 15px 15px 15px;
     border-radius: 8px;
 }
+.inputEmailError{
+    border: 2px solid rgb(189, 0, 0) !important;
+}
 
 .inputEmail:hover{
     border: 2px solid rgb(163, 159, 159);
 }
+
+
 
 .inputEmail:focus{
     outline: none;
@@ -62,12 +66,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 10px;
+}
+
+
+
+.buttonCreateContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonCreate{
+    width: 40%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    margin-top: 40px;
+    background-color: blue;
+}
+
+.buttonCreate:disabled{
+    background-color: rgb(163, 159, 159);
 }
 
 
 
 @media (max-width: 1200px){
+    .inputEmail{
+        width: 50%;
+    }
     .usernameContainer{
+        width: 50%;
+    }
+    .buttonCreate{
         width: 50%;
     }
 }
@@ -76,9 +110,21 @@
     .usernameContainer{
         width: 70%;
     }
+    .inputEmail{
+        width: 70%;
+    }
+    .buttonCreate{
+        width: 70%;
+    }
 }
 @media (max-width: 600px){
     .usernameContainer{
+        width: 90%;
+    }
+    .inputEmail{
+        width: 90%;
+    }
+    .buttonCreate{
         width: 90%;
     }
     .inputUsername{
