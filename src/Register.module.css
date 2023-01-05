@@ -47,6 +47,8 @@
     align-items: center;
 }
 
+.inputEmail{}
+
 @media (max-width: 1200px){
     .usernameContainer{
         width: 50%;
