@@ -86,10 +86,13 @@
     color: white;
     margin-top: 40px;
     background-color: blue;
+    cursor: pointer;
 }
 
 .buttonCreate:disabled{
-    background-color: rgb(163, 159, 159);
+    color: rgb(163, 159, 159);
+    background-color: rgb(235, 235, 235);
+    cursor: not-allowed;
 }
 
 
