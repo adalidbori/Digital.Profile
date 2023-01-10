@@ -95,6 +95,16 @@
     cursor: not-allowed;
 }
 
+.have_an_account_div{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_link{
+    cursor: pointer;
+}
+
 
 
 @media (max-width: 1200px){
