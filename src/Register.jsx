@@ -7,6 +7,7 @@ import {
     Link,
     Routes
 } from "react-router-dom";
+import { Login } from './Login';
 
 export function Register() {
     const [email, setEmail] = useState('');
@@ -51,7 +52,7 @@ export function Register() {
     });
 
     return (
-        <Router>
+        
             <div>
                 <h1 className={styles.title}>Create your account</h1>
                 <p className={styles.smallDesc}>Choose your Linktree username. You can always change it later.</p>
@@ -76,10 +77,9 @@ export function Register() {
                 </div>
                 <div className={styles.have_an_account_div}>
                     <label>Have a Linktree account? </label>
-                    <Link to="/">{<label className={styles.login_link}>Login</label>}</Link>
+                    <Link to="/login">{<label className={styles.login_link}>Login</label>}</Link>
                 </div>
             </div>
-        </Router>
-
+        
     );
 }
