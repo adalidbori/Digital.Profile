@@ -14,14 +14,6 @@ import { Register } from "./Register";
 export function Landing() {
     const [showLanding, setshowLanding] = useState(true);
 
-    const location = useLocation();
-
-  useEffect(() => {
-    console.log('Cambio');
-  }, [location]);
-
-
-
     const handleNavigation = () => {
         setshowLanding(false);
     };
@@ -34,17 +26,17 @@ export function Landing() {
 
 
     return (
-       
-            <div >
-                <Link to="/login">Login</Link>
-                <Link to="/register">Register</Link>
-                <h1 className={classes}>Landing Page</h1>
-                <div>
-                    <Routes>
-                        <Route path="/login" element={<Login setshowLanding={setshowLanding} />} />
-                        <Route path="/register" element={<Register setshowLanding={setshowLanding} />} />
-                    </Routes>
-                </div>
+
+        <div >
+            <Link to="/login">Login</Link>
+            <Link to="/register">Register</Link>
+            <h1 className={classes}>Landing Page</h1>
+            <div>
+                <Routes>
+                    <Route path="/login" element={<Login showLanding={showLanding} setshowLanding={setshowLanding} />} />
+                    <Route path="/register" element={<Register showLanding={showLanding} setshowLanding={setshowLanding} />} />
+                </Routes>
             </div>
+        </div>
     );
 }

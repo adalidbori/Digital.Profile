@@ -1,7 +1,7 @@
 import styles from './Register.module.css';
 
 export function Login({setshowLanding}){
-
+    //setshowLanding(false);
     return (
         <div>
             <h1 className={styles.title}>Log in to your Linktree</h1>
@@ -15,7 +15,7 @@ export function Login({setshowLanding}){
                     <input className={styles.inputEmail} type="password" placeholder="Password" />
                 </div>
                 <div className={styles.buttonCreateContainer}>
-                    <button className={styles.buttonCreate} >Create account</button>
+                    <button onClick={() => console.log("Button clicked!")} className={styles.buttonCreate} >Create account</button>
                 </div>
         </div>
     );
