@@ -10,16 +10,18 @@ import { Register } from "./Register";
 
 
 export function Landing() {
-    const [showLanding, setShowLanding] = useState(false);
+    const [showLanding, setShowLanding] = useState(true);
 
     const handleShowLanding = () => {
         setShowLanding(true);
-        console.log('link')
     }
 
+    const style = {
+        display: showLanding ? 'block' : 'none',
+    };
     return (
         <Router>
-            <div className={showLanding ? 'hidden' : ''}>
+            <div style={style}>
                 <Link to="/login" onClick={handleShowLanding}>Login</Link>
                 <Link to="/register" onClick={handleShowLanding}>Register</Link>
                 <h1>Landing Page</h1>
@@ -30,7 +32,6 @@ export function Landing() {
                     </Routes>
                 </div>
             </div>
-
         </Router>
 
     );
