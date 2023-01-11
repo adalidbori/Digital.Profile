@@ -1,6 +1,7 @@
 import styles from './Register.module.css';
 
-export function Login(){
+export function Login({setshowLanding}){
+
     return (
         <div>
             <h1 className={styles.title}>Log in to your Linktree</h1>

@@ -7,13 +7,15 @@ import {
     Link,
     Routes
 } from "react-router-dom";
-import { Login } from './Login';
 
-export function Register() {
+
+export function Register({setshowLanding}) {
     const [email, setEmail] = useState('');
     const [error, setError] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+
+    
 
     function isDisable() {
         if (!error) {

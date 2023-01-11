@@ -1,38 +1,50 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import classnames from 'classnames';
+import styles from './Landing.module.css';
 import {
     BrowserRouter as Router,
     Route,
     Link,
-    Routes
+    Routes,
+    useLocation
 } from "react-router-dom";
 import { Login } from "./Login";
 import { Register } from "./Register";
 
-
 export function Landing() {
-    const [showLanding, setShowLanding] = useState(true);
+    const [showLanding, setshowLanding] = useState(true);
 
-    const handleShowLanding = () => {
-        setShowLanding(true);
-    }
+    const location = useLocation();
 
-    const style = {
-        display: showLanding ? 'block' : 'none',
+  useEffect(() => {
+    console.log('Cambio');
+  }, [location]);
+
+
+
+    const handleNavigation = () => {
+        setshowLanding(false);
     };
+
+    const classes = classnames({
+        [styles.textoEnAzul]: showLanding,
+        [styles.hideGeneralDiv]: !showLanding
+    });
+
+
+
     return (
-        <Router>
-            <div style={style}>
-                <Link to="/login" onClick={handleShowLanding}>Login</Link>
-                <Link to="/register" onClick={handleShowLanding}>Register</Link>
-                <h1>Landing Page</h1>
+       
+            <div >
+                <Link to="/login">Login</Link>
+                <Link to="/register">Register</Link>
+                <h1 className={classes}>Landing Page</h1>
                 <div>
                     <Routes>
-                        <Route path="/login"  element={<Login />} />
-                        <Route path="/register"  element={<Register />} />
+                        <Route path="/login" element={<Login setshowLanding={setshowLanding} />} />
+                        <Route path="/register" element={<Register setshowLanding={setshowLanding} />} />
                     </Routes>
                 </div>
             </div>
-        </Router>
-
     );
 }
