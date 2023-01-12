@@ -2,15 +2,11 @@ import { useState } from 'react';
 import styles from './Register.module.css';
 import classnames from 'classnames';
 import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-    Routes
+    Link
 } from "react-router-dom";
 
 
-export function Register({setshowLanding}) {
-    const [email, setEmail] = useState('');
+export function Register() {
     const [error, setError] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -41,7 +37,6 @@ export function Register({setshowLanding}) {
 
     function handleChange(event) {
         const value = event.target.value;
-        setEmail(value);
         if (!validateEmail(value)) {
             setError(true);
         } else {
