@@ -1,0 +1,8 @@
+.imageClass{
+    max-width: 45%;
+    height: auto;
+}
+.generalContainer{
+    background-color: aqua;
+    display: flex;
+}
