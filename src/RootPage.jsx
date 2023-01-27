@@ -6,6 +6,7 @@ import {
 import { Landing } from "./Landing";
 import { Login } from "./Login";
 import { LoginGoogle } from "./LoginGoogle";
+import { Dashboard } from "./Pages/dashboard";
 import { Register } from "./Register";
 export function RootPage() {
     return (
