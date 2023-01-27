@@ -26,24 +26,36 @@ export function LoginGoogle() {
     const logOut = () => {
         setProfile([]);
     };
-    console.log(profile);
+    console.log(profile.imageUrl);
     return (
         <div>
             {(Object.keys(profile).length === 0) ? (
                 <div className={styles.generalContainer}>
-                    <div>
-                    <GoogleLogin
-                        clientId={clientId}
-                        buttonText="Sign in with Google"
-                        onSuccess={onSuccess}
-                        onFailure={onFailure}
-                        cookiePolicy={'single_host_origin'}
-                        isSignedIn={true}
-                    />
+                    <div className={styles.leftDiv}>
+                        <div>
+                            <div className={styles.title}>
+                                <h1 className={styles.h1login}>Sign up on Digital Profile</h1>
+                            </div>
+                            <div className={styles.description}>
+                                <p>The easiest way to introduce yourself thru internet.</p>
+                            </div>
+                            <div className={styles.botton}>
+                                <GoogleLogin
+                                    clientId={clientId}
+                                    buttonText="Sign in with Google"
+                                    onSuccess={onSuccess}
+                                    onFailure={onFailure}
+                                    cookiePolicy={'single_host_origin'}
+                                    isSignedIn={true}
+                                />
+                            </div>
+                        </div>
+
+
                     </div>
-                    
-                    <div className={styles.imageClass}>
-                        <img src={require('./Assets/loginImg.png')} alt="Mi imagen" />
+
+                    <div className={styles.rightDiv}>
+                        <img className={styles.imagenLogin} src={require('./Assets/loginImg.png')} alt="Mi imagen" />
                     </div>
                 </div>
 

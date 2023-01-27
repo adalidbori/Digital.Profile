@@ -1,8 +1,44 @@
-.imageClass{
-    max-width: 45%;
-    height: auto;
+.rightDiv{
+    flex: 1;
+    height: 100vh; 
 }
 .generalContainer{
-    background-color: aqua;
     display: flex;
+    flex-wrap: wrap;
+}
+.leftDiv{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagenLogin
+{
+    max-width: 800px;
+    height: 100%;
+    float: right;
+}
+.tittle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botton{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 20px;
+
+}
+.description{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description p{
+    text-align: center;
+    margin: 0;
+}
+.h1login{
+    text-align: center;
 }
