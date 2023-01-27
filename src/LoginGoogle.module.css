@@ -1,44 +1,92 @@
-.rightDiv{
+.rightDiv {
     flex: 1;
-    height: 100vh; 
+    height: 100vh;
 }
-.generalContainer{
+
+.generalContainer {
     display: flex;
     flex-wrap: wrap;
 }
-.leftDiv{
+
+.leftDiv {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
-.imagenLogin
-{
+
+.imagenLogin {
     max-width: 800px;
     height: 100%;
     float: right;
 }
-.tittle{
+
+.tittle {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.botton{
+
+.botton {
     justify-content: center;
     align-items: center;
     display: flex;
     margin: 20px;
 
 }
-.description{
+
+.description {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.description p{
+
+.description p {
     text-align: center;
     margin: 0;
 }
-.h1login{
+
+.h1login {
     text-align: center;
+}
+
+@media (max-width: 1150px) {
+    .imagenLogin {
+        max-width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 740px) {
+    .generalContainer {
+        display: block;
+    }
+
+    .imagenLogin {
+        max-width: 100%;
+        height: auto;
+        
+    }
+    .rightDiv {
+        height: 50%;
+    }
+    .leftDiv {
+        height: 50%;
+    }
+}
+
+@media (max-width: 377px) {
+    .rightDiv {
+        display: none;
+    }
+    .leftDiv{
+        height: 100vh;
+
+    }
+    .generalContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
