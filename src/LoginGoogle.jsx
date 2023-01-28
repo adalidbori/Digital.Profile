@@ -1,11 +1,12 @@
-import { GoogleLogin, GoogleLogout } from 'react-google-login';
+import { GoogleLogin } from 'react-google-login';
 import { gapi } from 'gapi-script';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import styles from './LoginGoogle.module.css';
-
-export function LoginGoogle() {
-    const [profile, setProfile] = useState([]);
-    const clientId = '402524613382-fl3q3fdrcs605o1n6l2sc2200btka5sa.apps.googleusercontent.com';
+import { useNavigate } from 'react-router-dom';
+import { clientID } from './utiles/Keys';
+export function LoginGoogle({profile, setProfile}) {
+    const navigate = useNavigate();
+    const clientId = clientID;
     useEffect(() => {
         const initClient = () => {
             gapi.client.init({
@@ -23,10 +24,7 @@ export function LoginGoogle() {
         console.log('failed:', err);
     };
 
-    const logOut = () => {
-        setProfile([]);
-    };
-    console.log(profile.imageUrl);
+    
     return (
         <div>
             {(Object.keys(profile).length === 0) ? (
@@ -60,16 +58,7 @@ export function LoginGoogle() {
                 </div>
 
             ) : (
-                <div>
-                    <img src={profile.imageUrl} alt="user" />
-                    <h3>User Logged in</h3>
-                    <p>Name: {profile.name}</p>
-                    <p>Email Address: {profile.email}</p>
-                    <p>Client ID: {profile.googleId}</p>
-                    <br />
-                    <br />
-                    <GoogleLogout clientId={clientId} buttonText="Log out" onLogoutSuccess={logOut} />
-                </div>
+                navigate('/dashboard')
             )}
         </div>
     );
