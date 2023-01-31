@@ -4,9 +4,11 @@ import { useEffect } from 'react';
 import styles from './LoginGoogle.module.css';
 import { useNavigate } from 'react-router-dom';
 import { clientID } from './utiles/Keys';
-export function LoginGoogle({profile, setProfile}) {
+import { useState } from 'react';
+export function LoginGoogle() {
     const navigate = useNavigate();
     const clientId = clientID;
+    const [profile, setProfile] = useState([]);
     useEffect(() => {
         const initClient = () => {
             gapi.client.init({
@@ -19,11 +21,11 @@ export function LoginGoogle({profile, setProfile}) {
 
     const onSuccess = (res) => {
         setProfile(res.profileObj);
+        localStorage.setItem('profile', JSON.stringify(res.profileObj));
     };
     const onFailure = (err) => {
         console.log('failed:', err);
     };
-
     
     return (
         <div>
@@ -48,8 +50,6 @@ export function LoginGoogle({profile, setProfile}) {
                                 />
                             </div>
                         </div>
-
-
                     </div>
 
                     <div className={styles.rightDiv}>
